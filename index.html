@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Form Registration</title>
 </head>
 <body>
     <form action="">
@@ -13,17 +13,102 @@
                 User ID:
             </div>
             <div class="col">
-                <Input type="text" id="txtUserID"></Input>
+                <input type="text" name="txtUserID" id="txtUserID" required>
+                <span id="statusOfUserID"></span>
             </div>
-        <div>
+        </div>
+
         <div class="row">
             <div class="col">
                 Password:
             </div>
             <div class="col">
-                <Input type="text" id="txtPassword"></Input>
+                <input type="password" name="txtPassword" id="txtPassword">
+                <span id="statusOfPassword"></span>
             </div>
-        <div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+               Name:
+            </div>
+            <div class="col">
+                <input type="password" name="txtName" id="txtName">
+                <span id="statusOfName"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+               Address:
+            </div>
+            <div class="col">
+                <input type="Address" name="txtAddress" id="txtAddress">
+                <span id="statusOfAddress"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              Country:
+            </div>
+            <div class="col">
+                <input type="Country" name="txtCountry" id="txtCountry">
+                <span id="statusOfCountry"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+               ZIP Code:
+            </div>
+            <div class="col">
+                <input type="ZIP Code" name="txtZIPCode" id="txtZIPCode">
+                <span id="statusOfZIPCode" ></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+               Email:
+            </div>
+            <div class="col">
+                <input type="Email" name="txtEmail" id="txtEmail">
+                <span id="statusOfEmail" ></span>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+               Sex:
+            </div>
+            <tr>
+                <td colspan="4">
+                    <div class="container">
+                        <input type="radio" id="asc" name="sort" value="">
+                        <label for="asc">Sắp xếp tăng dần</label><br>
+                    </div>
+                    <div class="container">
+                        <input type="radio" id="desc" name="sort" value="">
+                        <label for="desc">Sắp xếp giảm dần</label><br>
+                    </div>
+                </td>
+            </tr>
+            
+        </div>
+
+        <div class="row">
+            <div class="col">
+               
+            </div>
+            <div class="col">
+                <input type="submit" name="btnSubmit" valueid="btnSubmit" value="Submit" />
+            </div>
+        </div>
     </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
 </body>
 </html>
