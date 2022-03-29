@@ -35,7 +35,6 @@ Password.addEventListener("focus", function () {
 Password.addEventListener("focusout", leavePassword);
 
 function leavePassword() {
-  // Cách 02: dùng BTCQ: [1, +duongvocung]
   var PasswordRegex = /^[a-zA-Z0-9]{5,12}$/;
   if (PasswordRegex.test(Password.value)) {
     statusOfPassword.textContent = "Password hợp lệ";
@@ -115,30 +114,4 @@ function leaveEmail() {
     statusOfEmail.style.color = "red";
   }
 }
-
-// // Cách 03: Sử dụng thư viện jQuery
-// // Cú pháp jQuery: $(SELECTOR).ACTION()
-// $(document).ready(function(){
-
-//     function checkUserId(){
-//         // Cách 02: dùng BTCQ: [1, +duongvocung]
-//         let userID = $('#txtUserID').val();
-//         let userIDRegex = /^[a-zA-Z0-9]{5,12}$/;
-//         if(userIDRegex.test(userID)){
-//             return true
-//         }
-//         return false
-//     }
-
-//     $("#btnRegister").click(function(e){
-//         e.preventDefault();
-//         if(checkUserId()){
-//             $("#statusOfUserID").text('UserID hợp lệ')
-//             $("#statusOfUserID").css('color','blue')
-//         }else{
-//             $("#statusOfUserID").text('UserID không hợp lệ')
-//             $("#statusOfUserID").css('color','red')
-//         }
-//     })
-// })
 
