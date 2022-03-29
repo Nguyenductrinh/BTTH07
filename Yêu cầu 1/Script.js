@@ -58,7 +58,7 @@ Name.addEventListener("focus", function () {
 Name.addEventListener("focusout", leaveName);
 
 function leaveName() {
-  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  
   var NameRegex =
     /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
   if (NameRegex.test(Name.value)) {
@@ -82,8 +82,8 @@ Address.addEventListener("focus", function () {
 Address.addEventListener("focusout", leaveAddress);
 
 function leaveAddress() {
-  // Cách 02: dùng BTCQ: [1, +duongvocung]
-  var AddressRegex = /^[a-zA-Z0-9\s]+(\.)? [a-zA-Z]+(\,)? [A-Z]{2} [0-9]{5,6}$/;
+  
+  var AddressRegex = /^[a-zA-Z0-9\s,'-]*$/;
   if (AddressRegex.test(Address.value)) {
     statusOfAddress.textContent = "Address hợp lệ";
     statusOfAddress.style.color = "blue";
@@ -105,7 +105,7 @@ Email.addEventListener("focus", function () {
 Email.addEventListener("focusout", leaveEmail);
 
 function leaveEmail() {
-  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  
   var EmailRegex =/^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
   if (EmailRegex.test(Email.value)) {
     statusOfEmail.textContent = "Email hợp lệ";
@@ -115,17 +115,6 @@ function leaveEmail() {
     statusOfEmail.style.color = "red";
   }
 }
-// function formValidate() {
-//   var regExp = /^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
-//   var email = document.getElementById("email").value;
-//   if (regExp.test(email)){
-//     email.textContent = "Email hợp lệ!";
-//     email.style.color = "blue";
-//   }
-//   else{
-//     email.textContent = "email không hợp lệ!";
-//     email.style.color = "red";
-//   } 
 
 // // Cách 03: Sử dụng thư viện jQuery
 // // Cú pháp jQuery: $(SELECTOR).ACTION()
