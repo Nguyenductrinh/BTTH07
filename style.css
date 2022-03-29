@@ -1,9 +1,35 @@
-/* span{
-
-} */
-tr{
-    height: 40px;
+div{
+    font-family: Arial, Helvetica, sans-serif;
 }
-input[type='text'] {
-    width: 50px;
-}
+  .form-footer span {
+    float:left;
+    margin-top: 10px;
+    color:#999;  
+    font-style: italic;
+    font-weight: thin;
+  }
+ /* label {
+    display: block;
+    margin-bottom: 8px;
+  } 
+   */
+  label.light {
+    font-weight: 300;
+    display: inline;
+  } */
+  .btn {
+    text-align: center;
+     display:inline-block;
+     padding:10px 20px;
+     background-color: #1BBA93;
+     font-size:17px;
+     border:none;
+     border-radius:5px;
+     color:#bcf5e7;
+     cursor:pointer;
+  }
+  
+  .btn:hover {
+    background-color: #169c7b;
+    color:white;
+  }

@@ -1,106 +1,131 @@
 // Nguyễn Đức Trình
-// Check User Name
-let userID = document.getElementById('txtUserID');
-let statusOfUserID = document.getElementById('statusOfUserID')
 
-userID.addEventListener('focus',function(){
-    this.style.border = '1px solid red'
-})
+// Check User name
 
-userID.addEventListener('focusout', leaveUserId)
+let userID = document.getElementById("txtUserID");
+let statusOfUserID = document.getElementById("statusOfUserID");
 
-function leaveUserId(){
-   
-    // Cách 02: dùng BTCQ: [1, +duongvocung]
-    var userIDRegex = /^[a-zA-Z0-9]{5,12}$/;
-    if(userIDRegex.test(userID.value)){
-        statusOfUserID.textContent = 'UserID hợp lệ'
-        statusOfUserID.style.color = 'blue'
-    }else{
-        statusOfUserID.textContent = 'UserID không hợp lệ. Độ dài từ 5 - 12'
-        statusOfUserID.style.color = 'red'
-    }
+userID.addEventListener("focus", function () {
+  this.style.border = "1px solid red";
+});
+
+userID.addEventListener("focusout", leaveUserId);
+
+function leaveUserId() {
+  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  var userIDRegex = /^[a-zA-Z0-9]{5,12}$/;
+  if (userIDRegex.test(userID.value)) {
+    statusOfUserID.textContent = "UserID hợp lệ";
+    statusOfUserID.style.color = "blue";
+  } else {
+    statusOfUserID.textContent = "UserID không hợp lệ. Độ dài từ 5 - 12";
+    statusOfUserID.style.color = "red";
+  }
 }
 
-
-
 // Check Password
-// function checkPassword(){
-//     let Password = document.getElementById('txtPassword');
-//     let PasswordRegex = /^[a-zA-Z0-9]{7,12}$/;
-//     if(PasswordRegex.test(Password.value)){
-//         return true
-//     }
-//     return false
-// }
-let Password = document.getElementById('txtPassword');
-let statusOfPassword = document.getElementById('statusOfPassword')
 
-Password.addEventListener('focus',function(){
-    this.style.border = '1px solid red'
-})
+let Password = document.getElementById("txtPassword");
+let statusOfPassword = document.getElementById("statusOfPassword");
 
-Password.addEventListener('focusout', leavePassword)
+Password.addEventListener("focus", function () {
+  this.style.border = "1px solid red";
+});
 
-function leavePassword(){
+Password.addEventListener("focusout", leavePassword);
 
-    // Cách 02: dùng BTCQ: [1, +duongvocung]
-    var PasswordRegex = /^[a-zA-Z0-9]{7,12}$/;
-    if(PasswordRegex.test(userID.value)){
-        statusOfPassword.textContent = 'Password hợp lệ'
-        statusOfPassword.style.color = 'blue'
-    }else{
-        statusOfPassword.textContent = 'Password không hợp lệ. Độ dài từ 7 - 12'
-        statusOfPassword.style.color = 'red'
-    }
+function leavePassword() {
+  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  var PasswordRegex = /^[a-zA-Z0-9]{5,12}$/;
+  if (PasswordRegex.test(Password.value)) {
+    statusOfPassword.textContent = "Password hợp lệ";
+    statusOfPassword.style.color = "blue";
+  } else {
+    statusOfPassword.textContent = "Password không hợp lệ. Độ dài từ 7 - 12";
+    statusOfPassword.style.color = "red";
+  }
 }
 
 // Check Name
-// let Name = document.getElementById('txtName');
-// let statusOfName = document.getElementById('statusOfName')
 
-// Name.addEventListener('focus',function(){
-//     this.style.border = '1px solid red'
-// })
+let Name = document.getElementById("txtName");
+let statusOfName = document.getElementById("statusOfName");
 
-// Name.addEventListener('focusout', leaveName)
+Name.addEventListener("focus", function () {
+  this.style.border = "1px solid red";
+});
 
-// function leaveName(){
-    
-//     var NamedRegex = /^[a-zA]$/;
-//     if(NameRegex.test(userID.value)){
-//         statusOfName.textContent = 'Name hợp lệ'
-//         statusOfName.style.color = 'blue'
-//     }else{
-//         statusOfName.textContent = 'Name không hợp lệ. Có chứa số và ký tự đặc biệt'
-//         statusOfName.style.color = 'red'
-//     }
-// }
+Name.addEventListener("focusout", leaveName);
 
-// // Cách làm 02: Chỉ xử lý khi nhấp Submit
+function leaveName() {
+  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  var NameRegex =
+    /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$/;
+  if (NameRegex.test(Name.value)) {
+    statusOfName.textContent = "Name hợp lệ";
+    statusOfName.style.color = "blue";
+  } else {
+    statusOfName.textContent =
+      "Name không hợp lệ. Không được chứa số và ký tự đặc biệt";
+    statusOfName.style.color = "red";
+  }
+}
 
-// // let register = document.getElementById('btnRegister')
+// check Address
+let Address = document.getElementById("txtAddress");
+let statusOfAddress = document.getElementById("statusOfAddress");
 
-// // register.addEventListener('click', function(e){
-// //     e.preventDefault()
-// //     let statusOfUserID = document.getElementById('statusOfUserID')
-// //     let statusOfPassword = document.getElementById('statusOfPassword')
-// //     if(checkUserId() == true){
-// //         statusOfUserID.textContent = 'UserID hợp lệ'
-// //         statusOfUserID.style.color = 'blue'
-// //     }else{
-// //         statusOfUserID.textContent = 'UserID không hợp lệ. Độ dài từ 5 - 12'
-// //         statusOfUserID.style.color = 'red'
-// //     }
+Address.addEventListener("focus", function () {
+  this.style.border = "1px solid red";
+});
 
-// //     if(checkPassword() == true){
-// //         statusOfPassword.textContent = 'Password hợp lệ'
-// //         statusOfPassword.style.color = 'blue'
-// //     }else{
-// //         statusOfPassword.textContent = 'Password không hợp lệ. Độ dài từ 7 - 12'
-// //         statusOfPassword.style.color = 'red'
-// //     }
-// // })
+Address.addEventListener("focusout", leaveAddress);
+
+function leaveAddress() {
+  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  var AddressRegex = /^[a-zA-Z0-9\s]+(\.)? [a-zA-Z]+(\,)? [A-Z]{2} [0-9]{5,6}$/;
+  if (AddressRegex.test(Address.value)) {
+    statusOfAddress.textContent = "Address hợp lệ";
+    statusOfAddress.style.color = "blue";
+  } else {
+    statusOfAddress.textContent =
+      "Address không hợp lệ";
+    statusOfAddress.style.color = "red";
+  }
+}
+
+// Check Email
+let Email = document.getElementById("txtEmail");
+let statusOfEmail = document.getElementById("statusOfEmail");
+
+Email.addEventListener("focus", function () {
+  this.style.border = "1px solid red";
+});
+
+Email.addEventListener("focusout", leaveEmail);
+
+function leaveEmail() {
+  // Cách 02: dùng BTCQ: [1, +duongvocung]
+  var EmailRegex =/^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
+  if (EmailRegex.test(Email.value)) {
+    statusOfEmail.textContent = "Email hợp lệ";
+    statusOfEmail.style.color = "blue";
+  } else {
+    statusOfEmail.textContent ="Email không hợp lệ";
+    statusOfEmail.style.color = "red";
+  }
+}
+// function formValidate() {
+//   var regExp = /^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
+//   var email = document.getElementById("email").value;
+//   if (regExp.test(email)){
+//     email.textContent = "Email hợp lệ!";
+//     email.style.color = "blue";
+//   }
+//   else{
+//     email.textContent = "email không hợp lệ!";
+//     email.style.color = "red";
+//   } 
 
 // // Cách 03: Sử dụng thư viện jQuery
 // // Cú pháp jQuery: $(SELECTOR).ACTION()
@@ -127,3 +152,4 @@ function leavePassword(){
 //         }
 //     })
 // })
+
